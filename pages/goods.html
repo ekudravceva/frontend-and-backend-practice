@@ -1,45 +1,54 @@
 <!DOCTYPE html>
-<html lang = "ru">
-    <head>
-        <meta charset = "UTF-8">
-        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
-        <title>Семестровая работа</title>
-    </head>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Товары - Семестровая работа</title>
     <link rel="stylesheet" href="../style/styles.css">
-    <body>
-        <div id="header">Хэдер</div>
-        <div id="menu">
-            <ul>
-                <li><a href="../index.html">Главная</a></li>
-                <li><a href="news.html">Новости</a></li>
-                <li><a href="practices.html">Практики</a></li>
-                <li><a href="goods.html">Товары</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
+</head>
+<body>
+    <div class="page-container">
+        <div class="header">Хэдер</div>
+        <div class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
+                <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
+                <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
+                <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
+                <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
             </ul>
         </div>
-        <div id="content">
-
-             <div>
-                <p>Прогулка по лесу</p>
-                <img src="../images/good1.jpg" alt="Прогулка по лесу" width="200" height="250">
-                <p>Стоимость:</p>
-                <p>Принесенное домой ведро черники</p>
+        
+        <div class="goods-content">
+            <div class="goods-header">
+                <h1 class="goods-title">Наши товары</h1>
             </div>
+            
+            <div class="goods-container">
+                <div class="good-card">
+                    <img src="../images/good1.jpg" alt="Прогулка по лесу" class="good-image">
+                    <h3 class="good-name">Прогулка по лесу</h3>
+                    <div class="good-price">Стоимость: <span class="price-value">Принесенное домой ведро черники</span>
+                    </div>
+                </div>
 
-            <div>
-                <p>Чай с домашними пирогами</p>
-                <img src="../images/good2.jpg" alt="Чай с домашними пирогами" width="200" height="250">
-                <p>Стоимость:</p>
-                <p>Комплименты бабуле</p>
-            </div>
+                <div class="good-card">
+                    <img src="../images/good2.jpg" alt="Чай с домашними пирогами" class="good-image">
+                    <h3 class="good-name">Чай с домашними пирогами</h3>
+                    <div class="good-price">Стоимость: <span class="price-value">Комплименты бабуле</span>
+                    </div>
+                </div>
 
-            <div>
-                <p>Душевные разговоры под звездным небом</p>
-                <img src="../images/good3.jpg" alt="Душевные разговоры под звездным небом" width="200" height="250">
-                <p>Стоимость:</p>
-                <p>Бесценно</p>
+                <div class="good-card">
+                    <img src="../images/good3.jpg" alt="Душевные разговоры под звездным небом" class="good-image">
+                    <h3 class="good-name">Душевные разговоры под звездным небом</h3>
+                    <div class="good-price">Стоимость: <span class="price-value">Бесценно</span>
+                    </div>
+                </div>
             </div>
         </div>
-        <div id="footer">Футер</div>
-    </body>
+        
+        <div class="footer">Футер</div>
+    </div>
+</body>
 </html>

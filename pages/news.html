@@ -1,44 +1,63 @@
 <!DOCTYPE html>
-<html lamg = "ru">
-    <head>
-        <meta charset = "UTF-8">
-        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
-        <title>Семестровая работа</title>
-    </head>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новости - Семестровая работа</title>
     <link rel="stylesheet" href="../style/styles.css">
-    <body>
-        <div id="header">Хэдер</div>
-        <div id="menu">
-            <ul>
-                <li><a href="../index.html">Главная</a></li>
-                <li><a href="news.html">Новости</a></li>
-                <li><a href="practices.html">Практики</a></li>
-                <li><a href="goods.html">Товары</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
+</head>
+<body>
+    <div class="page-container">
+        <div class="header">Хэдер</div>
+        <div class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
+                <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
+                <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
+                <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
+                <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
             </ul>
         </div>
-        <div id="content">
-            <div>
-                <h2>Новость 1</h2>
-                <p>Дата публикации: 11.01.2111</p>
-                <p>Автор публикации: ekudravceva</p>
-                <p>Текст новости 1</p>
+        
+        <div class="news-content">
+            <div class="news-header">
+                <h1 class="news-title">Последние новости</h1>
             </div>
+            
+            <div class="news-container">
+                <!-- Новость 1 -->
+                <div class="news-card">
+                    <h2 class="news-card-title">Российско-бразильское образовательное сотрудничество</h2>
+                    <div class="news-meta">
+                        <span class="meta-date">Дата: 02.10.2025</span>
+                        <span class="meta-author">Автор: @rtumirea_official</span>
+                    </div>
+                    <p class="news-text">Кафедра иностранных языков ИТХТ имени М.В. Ломоносова укрепляет партнёрские связи с бразильскими университетами.  30 сентября Людмила Батурина провела для бразильских студентов лекцию «Международные бизнес-коммуникации». Занятие вызвало живой отклик аудитории.</p>
+                </div>
 
-            <div>
-                <h2>Новость 2</h2>
-                <p>Дата публикации: 22.02.2022</p>
-                <p>Автор публикации: ekudravceva</p>
-                <p>Текст новости 2</p>
-            </div>
+                <!-- Новость 2 -->
+                <div class="news-card">
+                    <h2 class="news-card-title">Студенты РТУ МИРЭА получили стипендии от «Росэлектроники»</h2>
+                    <div class="news-meta">
+                        <span class="meta-date">Дата: 01.10.2025</span>
+                        <span class="meta-author">Автор: @rtumirea_official</span>
+                    </div>
+                    <p class="news-text">Генеральный директор АО «Объединённая приборостроительная корпорация» Сергей Сахненко вручил именные стипендии талантливым первокурсникам РТУ МИРЭА, показавшим блестящие результаты на ЕГЭ.</p>
+                </div>
 
-            <div>
-                <h2>Новость 3</h2>
-                <p>Дата публикации: 03.03.2003</p>
-                <p>Автор публикации: ekudravceva</p>
-                <p>Текст новости 3</p>
+                <!-- Новость 3 -->
+                <div class="news-card">
+                    <h2 class="news-card-title">Учёные из РТУ МИРЭА разработали бесплатный модуль для QGIS</h2>
+                    <div class="news-meta">
+                        <span class="meta-date">Дата: 01.10.2025</span>
+                        <span class="meta-author">Автор: @rtumirea_official</span>
+                    </div>
+                    <p class="news-text">Модуль позволяет загружать данные (адрес участка, площадь, категорию земель, вид разрешённого использования и кадастровую стоимость) с Публичной кадастровой карты России по кадастровому номеру. Это первый в своём роде удобный инструмент, дающий векторные границы участков прямо в QGIS.</p>
+                </div>
             </div>
         </div>
-        <div id="footer">Футер</div>
-    </body>
+        
+        <div class="footer">Футер</div>
+    </div>
+</body>
 </html>

@@ -7,7 +7,6 @@ body {
     min-height: 100vh;
 }
 
-/* ===== КОНТЕЙНЕР СТРАНИЦЫ ===== */
 .page-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -16,12 +15,15 @@ body {
     box-shadow: 0 0 30px rgba(0,0,0,0.1);
 }
 
-/* ===== ШАПКА ===== */
-.header {
+/* ===== ШАПКА И ФУТЕР ===== */
+.header, .footer {
     background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
     color: white;
     text-align: center;
     padding: 30px;
+}
+
+.header {
     font-size: 28px;
     font-weight: 300;
     letter-spacing: 2px;
@@ -42,10 +44,6 @@ body {
     gap: 25px;
 }
 
-.nav-item {
-    margin: 0;
-}
-
 .nav-link {
     color: white;
     text-decoration: none;
@@ -60,26 +58,69 @@ body {
     transform: translateY(-2px);
 }
 
-/* ===== ОСНОВНОЙ КОНТЕНТ ===== */
-.content {
+/* ===== ОБЩИЕ СТИЛИ СТРАНИЦ ===== */
+.content, .contacts-content, .goods-content, .news-content {
     padding: 40px;
     max-width: 900px;
     margin: 0 auto;
 }
 
-/* ===== ГЛАВНАЯ СТРАНИЦА ===== */
-.profile-header {
+.goods-content { 
+    max-width: 1200px; 
+}
+
+/* ===== ОБЩИЕ ЗАГОЛОВКИ СТРАНИЦ ===== */
+.profile-header, .contacts-header, .goods-header, .news-header {
     text-align: center;
     margin-bottom: 40px;
 }
 
-.profile-title {
+.profile-title, .contacts-title, .goods-title, .news-title,
+.section-title, .title {
     font-size: 32px;
     color: #2c3e50;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     font-weight: 300;
 }
 
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* ===== КАРТОЧКИ (общие стили) ===== */
+.experience-card, .contact-block, .good-card, .news-card {
+    background: white;
+    padding: 25px 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    border-left: 4px solid #667eea;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.experience-card:hover { transform: translateX(5px); }
+.contact-block:hover { transform: translateX(5px); }
+.good-card:hover, .news-card:hover { transform: translateY(-5px); }
+
+/* ===== ЭФФЕКТ БЛИКА ===== */
+.contact-block::before, .good-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.05), transparent);
+    transition: left 0.5s ease;
+}
+
+.contact-block:hover::before, .good-card:hover::before {
+    left: 100%;
+}
+
+/* ===== ГЛАВНАЯ СТРАНИЦА ===== */
 .profile-photo {
     width: 220px;
     height: 280px;
@@ -139,30 +180,8 @@ body {
 }
 
 /* ===== ОПЫТ РАБОТЫ ===== */
-.experience-section {
-    margin-top: 50px;
-}
-
-.section-title {
-    font-size: 28px;
-    color: #2c3e50;
-    text-align: center;
-    margin-bottom: 30px;
-    font-weight: 300;
-}
-
-.experience-card {
-    background: white;
-    padding: 25px;
-    margin: 20px 0;
-    border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-    border-left: 4px solid #667eea;
-    transition: transform 0.3s ease;
-}
-
-.experience-card:hover {
-    transform: translateX(5px);
+.experience-section { 
+    margin-top: 50px; 
 }
 
 .experience-title {
@@ -178,10 +197,107 @@ body {
     margin: 0;
 }
 
-/* ===== ФУТЕР ===== */
-.footer {
-    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+/* ===== КОНТАКТЫ ===== */
+.contact-blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.contact-label, .good-name, .news-card-title {
+    font-size: 20px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.good-name { font-size: 22px; margin-bottom: 15px; }
+.news-card-title { font-size: 24px; margin-bottom: 15px; }
+
+.contact-value, .good-price, .news-text {
+    font-size: 18px;
+    color: #7f8c8d;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.contact-value {
+    padding: 12px 0;
+    color: #667eea;
+    font-weight: 500;
+}
+
+.news-text {
+    font-size: 16px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+/* ===== ТОВАРЫ ===== */
+.goods-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.good-card { text-align: center; padding: 25px; }
+
+.good-image {
+    width: 100%;
+    max-width: 250px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 0 auto 20px;
+    border: 3px solid #667eea;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
+    transition: all 0.3s ease;
+}
+
+.good-card:hover .good-image {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
+}
+
+.price-value {
+    font-size: 20px;
+    color: #667eea;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+/* ===== НОВОСТИ ===== */
+.news-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.news-meta {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+.meta-date { color: #667eea; font-weight: 500; }
+.meta-author { color: #764ba2; font-weight: 500; }
+
+/* ===== КНОПКА ===== */
+.call-button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
-    text-align: center;
-    padding: 30px;
+    border: none;
+    padding: 18px 40px;
+    font-size: 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    display: block;
+    margin: 0 auto;
 }
