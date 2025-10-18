@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="style/styles.css">
     <body>
         <div class="page-container">
-                <div class="header">Хэдер</div>
-                <div class="nav">
+                <header class="header">
+                    <h1>Главная</h1>
+                </header>
+                <nav class="nav">
                     <ul class="nav-list">
                         <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
                         <li class="nav-item"><a class="nav-link" href="pages/news.html">Новости</a></li>
@@ -17,40 +19,49 @@
                         <li class="nav-item"><a class="nav-link" href="pages/goods.html">Товары</a></li>
                         <li class="nav-item"><a class="nav-link" href="pages/contacts.html">Контакты</a></li>
                     </ul>
-                </div>
-            <div class="content">
-                <div class = "profile-header">
+                </nav>
+            <main class="content">
+                <article class = "profile-header">
                     <h1 class="profile-title">Информация об авторе</h1>
                     <img class="profile-photo" src="images/photo.jpg" alt="Фото автора">
                     <h2 class="profile-name">Кудрявцева Екатерина Юрьевна</h2>
                     <p class="profile-group">ЭФБО-02-24</p>
-                </div>
+                </article>
                 
-                <div class="about-me">
+                <section class="about-me">
+                    <h2>Обо мне</h2>
                     <p>Обо мне: Я не программист, я только учусь, но мирэа помогает нам совершать настоящие чудеса!</p>
-                </div>
+                </section>
 
-                <div class = "skills-container">
-                    <div class="skill-tag">HTML</div>
-                    <div class="skill-tag">CSS</div>
-                    <div class="skill-tag">Python</div>
-                </div>
+                <section class="skills-container"> 
+                    <h2>Мои навыки</h2>
+                    <div class="skills-grid"> 
+                        <div class="skill-tag">HTML</div>
+                        <div class="skill-tag">CSS</div>
+                        <div class="skill-tag">Python</div>
+                     </div>
+                </section>
 
-                <div class="experience-section">
+                <section class="experience-section">
                     <h2 class="section-title">Мой опыт работы</h2>
+                    <div class="experience-grid">
+                        <article class="experience-card">
+                            <h3 class="experience-title">ML-разработчик в Яндекс (стажировка)</h3>
+                            <p class="experience-desc">Шутка. Я безработная. Спасибо за внимание.</p>
+                        </article>
 
-                    <div class="experience-card">
-                        <h3 class="experience-title">ML-разработчик в Яндекс (стажировка)</h3>
-                        <p class="experience-desc">Шутка. Я безработная. Спасибо за внимание.</p>
+                        <article class="experience-card">
+                            <h3 class="experience-title">ML-разработчик в Яндекс</h3>
+                            <p class="experience-desc">Снова шутка. Все еще безработная. Ничего не изменилось.</p>
+                        </article>
                     </div>
+                </section>
+            </main>
 
-                    <div class="experience-card">
-                        <h3 class="experience-title">ML-разработчик в Яндекс</h3>
-                        <p class="experience-desc">Снова шутка. Все еще безработная. Ничего не изменилось.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="footer">Футер</div> 
+            <footer class="footer"> 
+                <p>Футер</p> 
+            </footer>
+
         </div>
     </body>
 </html> 
