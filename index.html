@@ -1,67 +1,128 @@
 <!DOCTYPE html>
-<html lang = "ru">
-    <head>
-        <meta charset = "UTF-8">
-        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
-        <title>Семестровая работа</title>
-    </head>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Семестровая работа</title>
     <link rel="stylesheet" href="style/styles.css">
-    <body>
-        <div class="page-container">
-                <header class="header">
-                    <h1>Главная</h1>
-                </header>
-                <nav class="nav">
-                    <ul class="nav-list">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
-                        <li class="nav-item"><a class="nav-link" href="pages/news.html">Новости</a></li>
-                        <li class="nav-item"><a class="nav-link" href="pages/practices.html">Практики</a></li>
-                        <li class="nav-item"><a class="nav-link" href="pages/goods.html">Товары</a></li>
-                        <li class="nav-item"><a class="nav-link" href="pages/contacts.html">Контакты</a></li>
-                    </ul>
-                </nav>
-            <main class="content">
-                <article class = "profile-header">
-                    <h1 class="profile-title">Информация об авторе</h1>
-                    <img class="profile-photo" src="images/photo.jpg" alt="Фото автора">
-                    <h2 class="profile-name">Кудрявцева Екатерина Юрьевна</h2>
-                    <p class="profile-group">ЭФБО-02-24</p>
-                </article>
-                
-                <section class="about-me">
-                    <h2>Обо мне</h2>
-                    <p>Обо мне: Я не программист, я только учусь, но мирэа помогает нам совершать настоящие чудеса!</p>
-                </section>
+</head>
 
-                <section class="skills-container"> 
-                    <h2>Мои навыки</h2>
-                    <div class="skills-grid"> 
-                        <div class="skill-tag">HTML</div>
-                        <div class="skill-tag">CSS</div>
-                        <div class="skill-tag">Python</div>
-                     </div>
-                </section>
-
-                <section class="experience-section">
-                    <h2 class="section-title">Мой опыт работы</h2>
-                    <div class="experience-grid">
-                        <article class="experience-card">
-                            <h3 class="experience-title">ML-разработчик в Яндекс (стажировка)</h3>
-                            <p class="experience-desc">Шутка. Я безработная. Спасибо за внимание.</p>
-                        </article>
-
-                        <article class="experience-card">
-                            <h3 class="experience-title">ML-разработчик в Яндекс</h3>
-                            <p class="experience-desc">Снова шутка. Все еще безработная. Ничего не изменилось.</p>
-                        </article>
-                    </div>
-                </section>
-            </main>
-
-            <footer class="footer"> 
-                <p>Футер</p> 
-            </footer>
-
+<body class="page">
+    <div class="page__container">
+        <!-- Переключатель темы -->
+        <div class="theme-switcher">
+            <button class="theme-switcher__button" type="button">Тёмная</button>
         </div>
-    </body>
-</html> 
+
+        <!-- Хэдер -->
+        <header class="header">
+            <h1 class="header__title">Главная</h1>
+        </header>
+
+        <!-- Навигация -->
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a class="nav__link nav__link--active" href="index.html">Главная</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="pages/news.html">Новости</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="pages/practices.html">Практики</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="pages/goods.html">Товары</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="pages/contacts.html">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Основной контент -->
+        <main class="main">
+            <!-- Профиль -->
+            <section class="profile">
+                <div class="profile__header">
+                    <h1 class="profile__title">Информация об авторе</h1>
+                </div>
+
+                <div class="profile__card">
+                    <img class="profile__photo" src="images/photo.jpg" alt="Фото автора">
+                    <div class="profile__info">
+                        <h2 class="profile__name">Кудрявцева Екатерина Юрьевна</h2>
+                        <p class="profile__group">ЭФБО-02-24</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Обо мне -->
+            <section class="about">
+                <h2 class="about__title">Обо мне</h2>
+                <div class="about__content">
+                    <p class="about__text">
+                        Обо мне: Я не программист, я только учусь, но мирэа помогает нам совершать настоящие чудеса!
+                    </p>
+                </div>
+            </section>
+
+            <!-- Навыки -->
+            <section class="skills">
+                <h2 class="skills__title">Мои навыки</h2>
+                <div class="skills__list">
+                    <div class="skill">HTML</div>
+                    <div class="skill">CSS</div>
+                    <div class="skill">Python</div>
+                </div>
+            </section>
+
+            <!-- Опыт работы -->
+            <section class="experience">
+                <h2 class="experience__title">Мой опыт работы</h2>
+                <div class="experience__grid">
+                    <article class="experience-card">
+                        <h3 class="experience-card__title">ML-разработчик в Яндекс (стажировка)</h3>
+                        <p class="experience-card__desc">Шутка. Я безработная. Спасибо за внимание.</p>
+                    </article>
+
+                    <article class="experience-card">
+                        <h3 class="experience-card__title">ML-разработчик в Яндекс</h3>
+                        <p class="experience-card__desc">Снова шутка. Все еще безработная. Ничего не изменилось.</p>
+                    </article>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Футер -->
+        <footer class="footer">
+            <p class="footer__text">Футер</p>
+        </footer>
+    </div>
+
+    <!--Переключение темы -->
+    <script>
+        const themeSwitcher = document.querySelector('.theme-switcher__button');
+        const root = document.documentElement;
+
+        themeSwitcher.addEventListener('click', () => {
+            const currentTheme = root.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            root.setAttribute('data-theme', newTheme);
+            themeSwitcher.textContent = newTheme === 'dark' ? 'Светлая' : 'Тёмная';
+
+            localStorage.setItem('theme', newTheme);
+        });
+
+        // Загружаем сохраненную тему при загрузке страницы
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            root.setAttribute('data-theme', savedTheme);
+            themeSwitcher.textContent = savedTheme === 'dark' ? 'Светлая' : 'Тёмная';
+        });
+    </script>
+</body>
+
+</html>

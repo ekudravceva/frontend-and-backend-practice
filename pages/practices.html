@@ -1,31 +1,79 @@
 <!DOCTYPE html>
-<html lamg = "ru">
-    <head>
-        <meta charset = "UTF-8">
-        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
-        <title>Семестровая работа</title>
-    </head>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практики - Семестровая работа</title>
     <link rel="stylesheet" href="../style/styles.css">
-    <body>
-        <div class="page-container">
-            <header class="header">
-                <h1>Практики</h1>
-            </header>
-                <nav class="nav">
-                        <ul class="nav-list">
-                            <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
-                            <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
-                            <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
-                            <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
-                        </ul>
-                </nav>
-            <main class="content">
-                <div>
-                    <h1 class="title">Пустая страница</h1>
-                </div>
-             </main>
+</head>
+
+<body class="page">
+    <div class="page__container">
+        <!-- Переключатель темы -->
+        <div class="theme-switcher">
+            <button class="theme-switcher__button" type="button">Тёмная</button>
         </div>
-        <footer class="footer">Футер</footer>
-    </body>
+
+        <!-- Хэдер -->
+        <header class="header">
+            <h1 class="header__title">Практики</h1>
+        </header>
+
+        <!-- Навигация -->
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a class="nav__link" href="../index.html">Главная</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="news.html">Новости</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link nav__link--active" href="practices.html">Практики</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="goods.html">Товары</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="contacts.html">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Основной контент -->
+        <main class="main">
+            <div class="empty-page">
+                <h1 class="empty-page__title">Пустая страница</h1>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p class="footer__text">Футер</p>
+        </footer>
+    </div>
+
+    <script>
+        // Переключатель темы
+        const themeSwitcher = document.querySelector('.theme-switcher__button');
+        const root = document.documentElement;
+
+        themeSwitcher.addEventListener('click', () => {
+            const currentTheme = root.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            root.setAttribute('data-theme', newTheme);
+            themeSwitcher.textContent = newTheme === 'dark' ? 'Светлая' : 'Тёмная';
+
+            localStorage.setItem('theme', newTheme);
+        });
+
+        // Загружаем сохраненную тему
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            root.setAttribute('data-theme', savedTheme);
+            themeSwitcher.textContent = savedTheme === 'dark' ? 'Светлая' : 'Тёмная';
+        });
+    </script>
+</body>
+
 </html>

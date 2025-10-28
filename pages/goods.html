@@ -1,56 +1,204 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Товары - Семестровая работа</title>
     <link rel="stylesheet" href="../style/styles.css">
 </head>
-<body>
-    <div class="page-container">
+
+<body class="page">
+    <div class="page__container">
+        <!-- Переключатель темы -->
+        <div class="theme-switcher">
+            <button class="theme-switcher__button" type="button">Тёмная</button>
+        </div>
+
+        <!-- Хэдер -->
         <header class="header">
-            <h1>Товары</h1>
+            <h1 class="header__title">Товары</h1>
         </header>
+
+        <!-- Навигация -->
         <nav class="nav">
-            <ul class="nav-list">
-                <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
-                <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
-                <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
-                <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
-                <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a class="nav__link" href="../index.html">Главная</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="news.html">Новости</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="practices.html">Практики</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link nav__link--active" href="goods.html">Товары</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="contacts.html">Контакты</a>
+                </li>
             </ul>
         </nav>
-        
-        <main class="goods-content">
-            <div class="goods-header">
-                <h1 class="goods-title">Наши товары</h1>
-            </div>
-            
-            <section class="goods-container">
-                <div class="good-card">
-                    <img src="../images/good1.jpg" alt="Прогулка по лесу" class="good-image">
-                    <h3 class="good-name">Прогулка по лесу</h3>
-                    <div class="good-price">Стоимость: <span class="price-value">Принесенное домой ведро черники</span>
-                    </div>
+
+        <!-- Основной контент -->
+        <main class="main main--wide">
+            <section class="goods">
+                <div class="goods__header">
+                    <h1 class="goods__title">Наши товары</h1>
                 </div>
 
-                <div class="good-card">
-                    <img src="../images/good2.jpg" alt="Чай с домашними пирогами" class="good-image">
-                    <h3 class="good-name">Чай с домашними пирогами</h3>
-                    <div class="good-price">Стоимость: <span class="price-value">Комплименты бабуле</span>
-                    </div>
-                </div>
+                <div class="goods__grid">
+                    <!-- Товар 1 -->
+                    <article class="good-card good-card--hover" onmouseenter="this.classList.add('good-card--hover')"
+                        onmouseleave="this.classList.remove('good-card--hover')" onclick="toggleSelection(this)">
+                        <img src="../images/good1.jpg" alt="Прогулка по лесу" class="good-card__image">
+                        <div class="good-card__content">
+                            <h3 class="good-card__title">Прогулка по лесу</h3>
+                            <p class="good-card__description">Насладитесь свежим воздухом, пением птиц и умиротворяющей
+                                атмосферой соснового бора.</p>
+                            <div class="good-card__price-section">
+                                <div class="good-card__price-label">Стоимость:</div>
+                                <div class="good-card__price-value">Принесенное домой ведро черники</div>
+                            </div>
+                            <div class="good-card__actions">
+                                <button class="button button--small"
+                                    onclick="event.stopPropagation(); addToCart(1)">Выбрать</button>
+                                <button class="button button--small button--secondary"
+                                    onclick="event.stopPropagation(); toggleFavorite(1)">❤️</button>
+                            </div>
+                        </div>
+                    </article>
 
-                <div class="good-card">
-                    <img src="../images/good3.jpg" alt="Душевные разговоры под звездным небом" class="good-image">
-                    <h3 class="good-name">Душевные разговоры под звездным небом</h3>
-                    <div class="good-price">Стоимость: <span class="price-value">Бесценно</span>
-                    </div>
+                    <!-- Товар 2 -->
+                    <article class="good-card good-card--hover good-card--discount"
+                        onmouseenter="this.classList.add('good-card--hover')"
+                        onmouseleave="this.classList.remove('good-card--hover')" onclick="toggleSelection(this)">
+                        <img src="../images/good2.jpg" alt="Чай с домашними пирогами" class="good-card__image">
+                        <div class="good-card__content">
+                            <h3 class="good-card__title">Чай с домашними пирогами</h3>
+                            <p class="good-card__description">Ароматный чай из самовара с теплыми пирогами,
+                                приготовленными с любовью.</p>
+                            <div class="good-card__price-section">
+                                <div class="good-card__price-label">Стоимость:</div>
+                                <div class="good-card__price-value">Комплименты бабуле</div>
+                            </div>
+                            <div class="good-card__actions">
+                                <button class="button button--small"
+                                    onclick="event.stopPropagation(); addToCart(2)">Выбрать</button>
+                                <button class="button button--small button--secondary"
+                                    onclick="event.stopPropagation(); toggleFavorite(2)">❤️</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Товар 3 -->
+                    <article class="good-card good-card--hover" onmouseenter="this.classList.add('good-card--hover')"
+                        onmouseleave="this.classList.remove('good-card--hover')" onclick="toggleSelection(this)">
+                        <img src="../images/good3.jpg" alt="Душевные разговоры под звездным небом"
+                            class="good-card__image">
+                        <div class="good-card__content">
+                            <h3 class="good-card__title">Душевные разговоры под звездным небом</h3>
+                            <p class="good-card__description">Задушевные беседы у костра под мерцание звезд и шепот
+                                ночного ветра.</p>
+                            <div class="good-card__price-section">
+                                <div class="good-card__price-label">Стоимость:</div>
+                                <div class="good-card__price-value">Бесценно</div>
+                            </div>
+                            <div class="good-card__actions">
+                                <button class="button button--small"
+                                    onclick="event.stopPropagation(); addToCart(3)">Выбрать</button>
+                                <button class="button button--small button--secondary"
+                                    onclick="event.stopPropagation(); toggleFavorite(3)">❤️</button>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </section>
         </main>
-        
-        <footer class="footer">Футер</footer>
+
+        <footer class="footer">
+            <p class="footer__text">Футер</p>
+        </footer>
     </div>
+
+    <script>
+        // Функции для интерактивности
+        let selectedCard = null;
+        let cartCount = 0;
+        const favorites = new Set();
+
+        function toggleSelection(card) {
+            if (selectedCard) {
+                selectedCard.classList.remove('good-card--selected');
+            }
+
+            if (selectedCard !== card) {
+                card.classList.add('good-card--selected');
+                selectedCard = card;
+            } else {
+                selectedCard = null;
+            }
+        }
+
+        function addToCart(productId) {
+            cartCount++;
+            updateCartIndicator();
+
+            // Анимация добавления в корзину
+            const button = event.target;
+            const originalText = button.textContent;
+            button.textContent = 'Добавлено!';
+            button.style.background = 'var(--color-success)';
+
+            setTimeout(() => {
+                button.textContent = originalText;
+                button.style.background = '';
+            }, 1500);
+
+            console.log(`Товар ${productId} добавлен в корзину`);
+        }
+
+        function toggleFavorite(productId) {
+            const button = event.target;
+
+            if (favorites.has(productId)) {
+                favorites.delete(productId);
+                button.textContent = '❤️';
+                button.style.background = '';
+            } else {
+                favorites.add(productId);
+                button.textContent = '💖';
+                button.style.background = 'var(--color-error)';
+            }
+
+            console.log('Избранные товары:', Array.from(favorites));
+        }
+
+        function updateCartIndicator() {
+            console.log(`Товаров в корзине: ${cartCount}`);
+        }
+
+        // Переключатель темы
+        const themeSwitcher = document.querySelector('.theme-switcher__button');
+        const root = document.documentElement;
+
+        themeSwitcher.addEventListener('click', () => {
+            const currentTheme = root.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            root.setAttribute('data-theme', newTheme);
+            themeSwitcher.textContent = newTheme === 'dark' ? 'Светлая' : 'Тёмная';
+
+            localStorage.setItem('theme', newTheme);
+        });
+
+        // Загружаем сохраненную тему
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            root.setAttribute('data-theme', savedTheme);
+            themeSwitcher.textContent = savedTheme === 'dark' ? 'Светлая' : 'Тёмная';
+        });
+    </script>
 </body>
+
 </html>
