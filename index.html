@@ -1,128 +1,270 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-bs-theme="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Семестровая работа</title>
-    <link rel="stylesheet" href="style/styles.css">
+    <title>Главная - Портфолио</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 
-<body class="page">
-    <div class="page__container">
-        <!-- Переключатель темы -->
-        <div class="theme-switcher">
-            <button class="theme-switcher__button" type="button">Тёмная</button>
-        </div>
-
-        <!-- Хэдер -->
-        <header class="header">
-            <h1 class="header__title">Главная</h1>
+<body class="bg-gradient">
+    <div class="container-fluid p-0">
+        <!-- Header -->
+        <header class="bg-dark bg-gradient text-white py-4 border-bottom border-primary">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <h1 class="h3 mb-1 fw-bold">Мое портфолио</h1>
+                        <p class="mb-0 opacity-75">Студент-разработчик</p>
+                    </div>
+                    <div class="col-auto">
+                        <span class="badge bg-primary text-dark fw-semibold">ЭФБО-02-24</span>
+                    </div>
+                </div>
+            </div>
         </header>
 
-        <!-- Навигация -->
-        <nav class="nav">
-            <ul class="nav__list">
-                <li class="nav__item">
-                    <a class="nav__link nav__link--active" href="index.html">Главная</a>
-                </li>
-                <li class="nav__item">
-                    <a class="nav__link" href="pages/news.html">Новости</a>
-                </li>
-                <li class="nav__item">
-                    <a class="nav__link" href="pages/practices.html">Практики</a>
-                </li>
-                <li class="nav__item">
-                    <a class="nav__link" href="pages/goods.html">Товары</a>
-                </li>
-                <li class="nav__item">
-                    <a class="nav__link" href="pages/contacts.html">Контакты</a>
-                </li>
-            </ul>
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-secondary">
+            <div class="container">
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active fw-semibold" href="index.html">
+                                <i class="bi bi-house me-2"></i>Главная
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-semibold" href="pages/news.html">
+                                <i class="bi bi-newspaper me-2"></i>Новости
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-semibold" href="pages/practices.html">
+                                <i class="bi bi-code-slash me-2"></i>Практики
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-semibold" href="pages/goods.html">
+                                <i class="bi bi-cart me-2"></i>Товары
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-semibold" href="pages/contacts.html">
+                                <i class="bi bi-telephone me-2"></i>Контакты
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
 
-        <!-- Основной контент -->
-        <main class="main">
-            <!-- Профиль -->
-            <section class="profile">
-                <div class="profile__header">
-                    <h1 class="profile__title">Информация об авторе</h1>
-                </div>
-
-                <div class="profile__card">
-                    <img class="profile__photo" src="images/photo.jpg" alt="Фото автора">
-                    <div class="profile__info">
-                        <h2 class="profile__name">Кудрявцева Екатерина Юрьевна</h2>
-                        <p class="profile__group">ЭФБО-02-24</p>
+        <!-- Main Content -->
+        <main class="container my-5">
+            <!-- Profile Section -->
+            <section class="mb-5">
+                <div class="card shadow-lg border-0 rounded-4">
+                    <div class="card-body p-5">
+                        <div class="row align-items-center">
+                            <div class="col-md-3 text-center mb-4 mb-md-0">
+                                <img src="images/photo2.jpg" alt="Фото студента"
+                                    class="img-fluid rounded-circle border border-4 border-primary"
+                                    style="width: 160px; height: 160px; object-fit: cover;">
+                            </div>
+                            <div class="col-md-9">
+                                <h2 class="card-title h3 fw-bold text-info">Кудрявцева Екатерина Юрьевна</h2>
+                                <p class="card-text text-muted mb-2 fs-5">
+                                    <i class="bi bi-bookmark-check-fill text-info me-2"></i>
+                                    Студентка группы ЭФБО-02-24
+                                </p>
+                                <p class="card-text fs-6 text-secondary">
+                                    ИПТИП, "Фуллстек-разработка"
+                                </p>
+                                <div class="d-flex gap-3 flex-wrap mt-3">
+                                    <span class="badge bg-info text-dark fs-6 px-3 py-2">HTML/CSS</span>
+                                    <span class="badge bg-success fs-6 px-3 py-2">JavaScript</span>
+                                    <span class="badge bg-primary fs-6 px-3 py-2">Bootstrap</span>
+                                    <span class="badge bg-warning text-dark fs-6 px-3 py-2">Python</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Обо мне -->
-            <section class="about">
-                <h2 class="about__title">Обо мне</h2>
-                <div class="about__content">
-                    <p class="about__text">
-                        Обо мне: Я не программист, я только учусь, но мирэа помогает нам совершать настоящие чудеса!
-                    </p>
+            <!-- About Section -->
+            <section class="mb-5">
+                <div class="card shadow-lg border-0 rounded-4">
+                    <div class="card-header bg-dark bg-gradient text-white border-0 rounded-top-4 py-3">
+                        <h3 class="card-title h4 mb-0 fw-bold">
+                            <i class="bi bi-person-circle text-info me-2"></i>
+                            Обо мне
+                        </h3>
+                    </div>
+                    <div class="card-body p-4">
+                        <p class="card-text fs-6 mb-3">
+                            Я увлекаюсь веб-разработкой и изучаю современные технологии.
+                            В свободное время также изучаю ML и учусь создавать нейросети.
+                        </p>
+                        <p class="card-text fs-6 mb-0">
+                            Основные интересы: фронтенд разработка, UX/UI дизайн и мобильная разработка.
+                            Стремлюсь к созданию качественных и функциональных сайтов.
+                        </p>
+                    </div>
                 </div>
             </section>
 
-            <!-- Навыки -->
-            <section class="skills">
-                <h2 class="skills__title">Мои навыки</h2>
-                <div class="skills__list">
-                    <div class="skill">HTML</div>
-                    <div class="skill">CSS</div>
-                    <div class="skill">Python</div>
+            <!-- Skills Section -->
+            <section class="mb-5">
+                <div class="card shadow-lg border-0 rounded-4">
+                    <div class="card-header bg-dark bg-gradient text-white border-0 rounded-top-4 py-3">
+                        <h3 class="card-title h4 mb-0 fw-bold">
+                            <i class="bi bi-tools text-info me-2"></i>
+                            Мои навыки
+                        </h3>
+                    </div>
+                    <div class="card-body p-4">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-4">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span class="fw-semibold">HTML/CSS</span>
+                                        <span class="text-info fw-bold">70%</span>
+                                    </div>
+                                    <div class="progress rounded-pill" style="height: 10px;">
+                                        <div class="progress-bar bg-info progress-bar-striped progress-bar-animated"
+                                            style="width: 70%"></div>
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span class="fw-semibold">JavaScript</span>
+                                        <span class="text-info fw-bold">40%</span>
+                                    </div>
+                                    <div class="progress rounded-pill" style="height: 10px;">
+                                        <div class="progress-bar bg-success progress-bar-striped progress-bar-animated"
+                                            style="width: 40%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-4">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span class="fw-semibold">Bootstrap</span>
+                                        <span class="text-info fw-bold">45%</span>
+                                    </div>
+                                    <div class="progress rounded-pill" style="height: 10px;">
+                                        <div class="progress-bar bg-primary progress-bar-striped progress-bar-animated"
+                                            style="width: 45%"></div>
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span class="fw-semibold">Python</span>
+                                        <span class="text-info fw-bold">85%</span>
+                                    </div>
+                                    <div class="progress rounded-pill" style="height: 10px;">
+                                        <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated"
+                                            style="width: 85%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
-            <!-- Опыт работы -->
-            <section class="experience">
-                <h2 class="experience__title">Мой опыт работы</h2>
-                <div class="experience__grid">
-                    <article class="experience-card">
-                        <h3 class="experience-card__title">ML-разработчик в Яндекс (стажировка)</h3>
-                        <p class="experience-card__desc">Шутка. Я безработная. Спасибо за внимание.</p>
-                    </article>
-
-                    <article class="experience-card">
-                        <h3 class="experience-card__title">ML-разработчик в Яндекс</h3>
-                        <p class="experience-card__desc">Снова шутка. Все еще безработная. Ничего не изменилось.</p>
-                    </article>
+            <!-- Projects Section -->
+            <section class="mb-5">
+                <div class="card shadow-lg border-0 rounded-4">
+                    <div class="card-header bg-dark bg-gradient text-white border-0 rounded-top-4 py-3">
+                        <h3 class="card-title h4 mb-0 fw-bold">
+                            <i class="bi bi-folder-fill text-info me-2"></i>
+                            Мои проекты
+                        </h3>
+                    </div>
+                    <div class="card-body p-4">
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="card h-100 shadow-sm border-0 rounded-3">
+                                    <img src="images/project1.jpg" class="card-img-top rounded-top-3" alt="Личный сайт"
+                                        style="height: 180px; object-fit: cover;">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title fw-bold">Личный сайт</h5>
+                                        <p class="card-text small text-muted flex-grow-1">
+                                            Сайт-портфолио на HTML, CSS и Bootstrap с адаптивным дизайном.
+                                        </p>
+                                        <div class="mb-2">
+                                            <span class="badge bg-info text-dark">HTML</span>
+                                            <span class="badge bg-info text-dark">CSS</span>
+                                            <span class="badge bg-primary text-dark">Bootstrap</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card h-100 shadow-sm border-0 rounded-3">
+                                    <img src="images/project2.jpg" class="card-img-top rounded-top-3"
+                                        alt="Планировщик меню" style="height: 180px; object-fit: cover;">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title fw-bold">Планировщик меню</h5>
+                                        <p class="card-text small text-muted flex-grow-1">
+                                            Приложение для хранения рецептов и планирования меню с использованием
+                                            Python.
+                                        </p>
+                                        <div class="mb-2">
+                                            <span class="badge bg-warning text-dark">Python</span>
+                                            <span class="badge bg-secondary">SQLite</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card h-100 shadow-sm border-0 rounded-3">
+                                    <img src="images/project3.jpg" class="card-img-top rounded-top-3"
+                                        alt="Сайт футбольного клуба" style="height: 180px; object-fit: cover;">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title fw-bold">Сайт футбольного клуба</h5>
+                                        <p class="card-text small text-muted flex-grow-1">
+                                            Сайт-визитка футбольного клуба с современным user-friendly интерфейсом.
+                                        </p>
+                                        <div class="mb-2">
+                                            <span class="badge bg-info text-dark">HTML/CSS</span>
+                                            <span class="badge bg-success">JavaScript</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
-
         </main>
 
-        <!-- Футер -->
-        <footer class="footer">
-            <p class="footer__text">Футер</p>
+        <!-- Footer -->
+        <footer class="bg-dark bg-gradient text-white py-4 mt-5 border-top border-primary">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="mb-0 fw-semibold">&copy; 2025 Портфолио студента. Все права защищены.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="pages/contacts.html"
+                            class="text-white text-decoration-none me-4 fw-semibold">Контакты</a>
+                        <a href="#" class="text-white text-decoration-none fw-semibold">Политика конфиденциальности</a>
+                    </div>
+                </div>
+            </div>
         </footer>
     </div>
 
-    <!--Переключение темы -->
-    <script>
-        const themeSwitcher = document.querySelector('.theme-switcher__button');
-        const root = document.documentElement;
-
-        themeSwitcher.addEventListener('click', () => {
-            const currentTheme = root.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            root.setAttribute('data-theme', newTheme);
-            themeSwitcher.textContent = newTheme === 'dark' ? 'Светлая' : 'Тёмная';
-
-            localStorage.setItem('theme', newTheme);
-        });
-
-        // Загружаем сохраненную тему при загрузке страницы
-        document.addEventListener('DOMContentLoaded', () => {
-            const savedTheme = localStorage.getItem('theme') || 'light';
-            root.setAttribute('data-theme', savedTheme);
-            themeSwitcher.textContent = savedTheme === 'dark' ? 'Светлая' : 'Тёмная';
-        });
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
